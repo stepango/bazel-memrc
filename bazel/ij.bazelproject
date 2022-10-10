@@ -1,0 +1,30 @@
+directories:
+  .
+  -bazel-bazel-grabrc
+  -bazel-bin
+  -bazel-genfiles
+  -bazel-out
+  -bazel-testlogs
+  -tmp
+
+# Automatically includes all relevant targets under the 'directories' above
+# derive_targets_from_directories: true
+
+targets:
+  //...
+
+workspace_type: java
+
+test_sources:
+  src/test/*
+
+additional_languages:
+  # Uncomment any additional languages you want supported
+  # android
+  # dart
+  # go
+  # javascript
+  # kotlin
+  # python
+  # scala
+  # typescript
