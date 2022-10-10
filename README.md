@@ -1,6 +1,4 @@
-# grabrc project
-
-### aka **GRA**dle **B**azel **R**emote **C**ache 
+# bazel-memrc project 
 
 Simple, in-memory, GRPC Bazel remote cache v2 implementation, built with Java & Bazel, inspired by:
 
