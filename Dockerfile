@@ -7,8 +7,8 @@ WORKDIR /grabrc
 COPY . /grabrc
 
 RUN apt-get update && apt-get install -y gcc build-essential
-RUN wget https://github.com/bazelbuild/bazelisk/releases/download/v1.14.0/bazelisk-linux-amd64
-RUN mv bazelisk-linux-amd64 /usr/local/bin/bazelisk; chmod +x /usr/local/bin/bazelisk
+RUN wget https://github.com/bazelbuild/bazelisk/releases/download/v1.14.0/bazelisk-linux-arm64
+RUN mv bazelisk-linux-arm64 /usr/local/bin/bazelisk; chmod +x /usr/local/bin/bazelisk
 
 RUN ls -l
 

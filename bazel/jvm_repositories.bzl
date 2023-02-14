@@ -11,7 +11,15 @@ def jvm_deps():
         "services",
     ]
 
-    IO_GRPC_ARTIFACTS = ["io.grpc:grpc-%s:1.42.0" % module for module in IO_GRPC_MODULES]
+    ARMERIA_MODULES = [
+        "armeria",
+        "armeria-grpc",
+        "armeria-logback",
+    ]
+
+    ARMERIA_ARTIFACTS = ["com.linecorp.armeria:%s:1.22.0" % module for module in ARMERIA_MODULES]
+
+    IO_GRPC_ARTIFACTS = ["io.grpc:grpc-%s:1.52.1" % module for module in IO_GRPC_MODULES]
 
     PROTOBUF_JAVA_VERSION = "3.21.3"
 
@@ -27,7 +35,7 @@ def jvm_deps():
             "ch.qos.logback:logback-classic:1.3.4",
             "com.google.protobuf:protobuf-java-util:" + PROTOBUF_JAVA_VERSION,
             "com.google.protobuf:protobuf-java:" + PROTOBUF_JAVA_VERSION,
-        ] + IO_GRPC_ARTIFACTS,
+        ] + IO_GRPC_ARTIFACTS + ARMERIA_ARTIFACTS,
         generate_compat_repositories = True,
         repositories = [
             "https://maven.google.com",
